@@ -18,7 +18,7 @@ return (
           <a class="nav-link active my-2 my-sm-0" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link my-2 my-sm-0" href="#">About</a>
+          <a class="nav-link my-2 my-sm-0" href="#">Add Profile</a>
         </li>
       </ul>
     </div>
