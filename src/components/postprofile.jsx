@@ -15,10 +15,20 @@ function PostProfile() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+if (
+  formData.name === '' ||
+  formData.phone === '' ||
+  formData.speed === '' ||
+  formData.Frame === '' ||
+  formData.pop_name === '' ||
+  formData.Attainable_speed === ''
+) {
+  console.log("At least one field is empty");
+}
     try {
       const response = await axios.post('https://jsonplaceholder.typicode.com/posts', formData);
       console.log('Post successful:', response.data);
+      
       // You can perform any additional actions after successful post
     } catch (error) {
       console.error('Error posting data:', error);
@@ -38,7 +48,7 @@ function PostProfile() {
      <h2>Add profile</h2>
     <div className='post' >
      
-      <form onSubmit={handleSubmit}>
+      <form >
         <div className="mb-3">
           <label className="form-label">Name</label>
           <input type="text" className="form-control" name="name" value={formData.name} onChange={handleInputChange} />
@@ -67,7 +77,7 @@ function PostProfile() {
           <label className="form-label">Attainable Speed</label>
           <input type="text" className="form-control" name="Attainable_speed" value={formData.Attainable_speed} onChange={handleInputChange} />
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit</button>
       </form>
 
     </div>
