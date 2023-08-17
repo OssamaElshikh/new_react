@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Table, Button } from 'react-bootstrap';
-import ProfileDetails from './viewprofile'; // Import the new component
+import ProfileDetails from './viewprofile'; 
+import { Link } from 'react-router-dom';
+
 
 function Profile() {
   const [data, Setprofiles] = useState([]);
@@ -14,6 +16,7 @@ function Profile() {
   }, []);
 
   const handleViewDetails = (profile) => {
+  
     setSelectedProfile(profile);
   };
 
@@ -23,11 +26,14 @@ function Profile() {
 
   return (
     <div>
-      {selectedProfile ? (
+     {selectedProfile ? (
         <div>
           {/* Show profile details when selectedProfile is not null */}
-          <Button variant="secondary" onClick={handleBackToList}>Back to List</Button>
           <ProfileDetails profile={selectedProfile} />
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                      <button type="button" class="btn btn-outline-primary"onClick={handleBackToList}>Back to List</button>
+
+            </div>
         </div>
       ) : (
         <div className="table-responsive">
@@ -56,9 +62,11 @@ function Profile() {
                   <td>{user.email}</td>
                   <td>{user.location.coordinates.latitude}</td>
                   <td>
-                    <Button variant="info" size="sm" className="mr-1" onClick={() => handleViewDetails(user)}>View</Button>
-                    <Button variant="warning" size="sm" className="mr-1">Update</Button>
-                    <Button variant="danger" size="sm" className="mr-0">Delete</Button>
+                    {/* <Button onClick={() => handleViewDetails(user)}  ><Link to={`/viewprofile`}> view</Link> </Button> */}
+                  <button type="button" class="btn btn-outline-info sm" onClick={() => handleViewDetails(user)}>View</button>
+                  <button type="button" class="btn btn-outline-warning sm">Update</button>
+                  <button type="button" class="btn btn-outline-danger sm">Delete</button>
+
                   </td>
                 </tr>
               ))}
@@ -71,3 +79,6 @@ function Profile() {
 }
 
 export default Profile;
+ 
+
+

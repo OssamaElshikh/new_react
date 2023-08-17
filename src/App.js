@@ -1,18 +1,19 @@
 
-import './App.css';
-import Profile from './components/Profile';
-import PostProfile from './components/postprofile';
-import Nav from './components/navbar'
+// import './App.css';
+// import Profile from './components/Profile';
+// import PostProfile from './components/postprofile';
+// import Nav from './components/navbar'
 
 
-function App() {
+// function App() {
 
-  return (
-  <>
-    <Nav/>
-  <Profile/>
-  </>
-  );
-}
+//   return (
+// <div className='App'>
+//     <Nav/>
+//   <Profile/>
+//   </div>
+ 
+//   );
+// }
 
-export default App;
+// export default App;

@@ -34,8 +34,10 @@ function PostProfile() {
   };
 
   return (
-    <div >
-      <h2>Post Profile</h2>
+    <div>
+     <h2>Add profile</h2>
+    <div className='post' >
+     
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label className="form-label">Name</label>
@@ -67,6 +69,9 @@ function PostProfile() {
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
+
+    </div>
+
     </div>
   );
 }
