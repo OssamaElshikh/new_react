@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -17,21 +19,22 @@ function Login() {
     // Here you can perform actions with the username and password, like authentication
     console.log('Username:', username);
     console.log('Password:', password);
+    navigate('/profile')
   };
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
-      <h1>Login</h1>
+      <h1 >Login</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label className="col-form-label mt-4" htmlFor="inputDefault">Enter username</label>
-          <input type="text" className="form-control" placeholder="Default input" id="inputDefault" value={username} onChange={handleUsernameChange} />
+          <input type="text" className="form-control" placeholder="Username" id="inputDefault" value={username} onChange={handleUsernameChange} />
         </div>
         <div className="form-group">
           <label className="form-label mt-4">Enter Password</label>
           <input type="password" className="form-control" id="floatingPassword" placeholder="Password" autoComplete="off" value={password} onChange={handlePasswordChange} />
         </div>
-        <button type="submit" className="btn btn-primary">Login</button>
+        <button type="submit" className="btn btn-info">Login</button>
       </form>
     </div>
   );

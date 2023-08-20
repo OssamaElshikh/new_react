@@ -9,7 +9,7 @@ function Nav () {
 return (
   <nav class="navbar navbar-expand-lg bg-primary sticky-top" data-bs-theme="dark">
   <div class="container-fluid">
-    <Link class="navbar-brand" href="/">Profile manager tool</Link>
+    <Link class="navbar-brand" to="/">Profile manager tool</Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
