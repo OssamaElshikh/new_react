@@ -2,13 +2,15 @@ import React from 'react';
 import './overlay.css';
 
 
+//this form is not used 
+
 
 function ProfileDetails({ profile }) {
-  
-  return (
-    
 
-        <div className="card modal-overlay" >
+  return (
+
+
+    <div className="card modal-overlay" >
       <h3 className="card-header">Profile Details</h3>
       <div className="card-body">
         <h5 className="card-title">{profile.id} </h5>
@@ -28,7 +30,7 @@ function ProfileDetails({ profile }) {
       </div> */}
     </div>
 
-    
+
   );
 }
 
