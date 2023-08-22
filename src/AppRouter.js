@@ -3,6 +3,7 @@ import { BrowserRouter , Route, Routes } from 'react-router-dom';
 import PostProfile from './components/postprofile'; // Import your PostProfile component
 import ProfileTable from './components/profilestable';
 import Login2 from './components/login2';
+import Register from './components/register';
 // import 'bootstrap/dist/css/bootstrap.min.css'
 
 function AppRouter() {
@@ -11,15 +12,18 @@ function AppRouter() {
     <BrowserRouter>
      
      <Routes>
-       
-        <Route path="/login" element={<Login2 />} />
 
-        <Route path="/" element={<ProfileTable />} />
-        <Route path="/profile" element={<ProfileTable />} />
+        <Route path="/" element={<Login2 />} />
+        <Route path="/login" element={<Login2 />} />
+        <Route path="/register" element={<Register />} />
+       <Route path="/profile" element={<ProfileTable />} />
         <Route path="/addprofile" element={<PostProfile />} />
   
         
       </Routes>
+    
+ 
+    
     </BrowserRouter>
     </>
   );
