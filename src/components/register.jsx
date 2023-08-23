@@ -15,11 +15,11 @@ function Register() {
                 username,
                 password,
             });
-            // If registration is successful, navigate to '/profile'
+
             if (response.status === 201) {
                 navigate('/profile');
             } else {
-                setError('User with same username exists.');
+                setError('User with same Username exists.');
             }
         } catch (error) {
             setError('User with same Username exists.');
