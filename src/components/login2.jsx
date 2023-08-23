@@ -78,8 +78,8 @@ function Login2() {
                         </form>
                     </div>
                 </div>
-            </div> :
-            <Navigate to='/profile' replace />
+            </div>
+            : <Navigate to='/profile' replace />
 
     );
 }

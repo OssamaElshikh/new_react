@@ -1,14 +1,9 @@
 import React from 'react';
-import { Route, Navigate } from 'react-router-dom';
+import { Outlet, Navigate } from 'react-router-dom';
 
-const ProtectedRoute = ({ path, element: Element }) => {
-    const isAuthenticated = true; // Replace with your actual authentication check
+const ProtectedRoute = () => {
+    const isAuthenticated = localStorage.getItem('token');
 
-    return isAuthenticated ? (
-        <Route path={path} element={<Element />} />
-    ) : (
-        <Navigate to="/login" />
-    );
+    return isAuthenticated ? < Outlet /> : <Navigate to="/login" />
 };
-
 export default ProtectedRoute;
