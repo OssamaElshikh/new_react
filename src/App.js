@@ -1,19 +1,17 @@
+import React from 'react';
+import './App.css';
+import AppRouter from './AppRouter';
+import { BrowserRouter } from 'react-router-dom';
 
-// import './App.css';
-// import Profile from './components/Profile';
-// import PostProfile from './components/postprofile';
-// import Nav from './components/navbar'
 
+function App() {
 
-// function App() {
+  return (
+    <BrowserRouter>
+<AppRouter/>
+  </BrowserRouter>
+  
+  );
+}
 
-//   return (
-// <div className='App'>
-//     <Nav/>
-//   <Profile/>
-//   </div>
- 
-//   );
-// }
-
-// export default App;
+export default App;

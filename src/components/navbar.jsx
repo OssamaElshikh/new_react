@@ -6,7 +6,7 @@ function Nav() {
   const navigate = useNavigate();
   const handleLogout = () => {
     // Clear the authentication data
-    localStorage.removeItem('access_token');
+    localStorage.removeItem('token');
     // Navigate to the login page
     navigate('/login');
   };
