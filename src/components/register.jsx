@@ -31,7 +31,7 @@ function Register() {
     return (
         <div>
 
-            <nav className="navbar navbar-expand-lg bg-primary fixed " data-bs-theme="dark">
+            <nav className="navbar navbar-expand-lg bg-primary sticky-top " data-bs-theme="dark">
 
                 <img
                     src={weicon}

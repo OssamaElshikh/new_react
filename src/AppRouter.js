@@ -9,7 +9,6 @@ import PostProfile from "./components/postprofile"; // Import your PostProfile c
 import ProfileTable from "./components/profilestable";
 import Login2 from "./components/login2";
 import Register from "./components/register";
-
 import ProtectedRoute from "./components/protected_route";
 
 function AppRouter() {

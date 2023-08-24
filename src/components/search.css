@@ -1,0 +1,20 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Adjust the gap between the search bar and radio buttons */
+}
+
+.radio-buttons {
+    display: flex;
+    gap: 10px;
+    /* Adjust the gap between radio buttons */
+}
+.search-input {
+    height: 40px;
+    /* Increase the height */
+    width: 50px;
+    /* Increase the width */
+    font-size: 16px;
+    /* Adjust the font size */
+}
